@@ -1,10 +1,9 @@
 
-# cd gym-2048
+# cd ../2048
 # pip install -e .
-# cd ..
+# cd ../gym-2048
+# pip install -e .
 
-# Note: if you don't run it from 2048/, you can't import Game or Board.
-# These classes need to be included in the Env, or as a separate pip package.
 
 import gym
 import gym_2048
@@ -12,7 +11,7 @@ import gym_2048
 env = gym.make('2048-v0')
 observation = env.reset()
 
-for t in range(100):
+for t in range(500):
     env.render()
     # print(observation)
     action = env.action_space.sample()
